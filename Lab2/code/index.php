@@ -260,7 +260,7 @@ echo $date["year"] . " " . $date['month'] . " " . $date['day'] . "\n";
 $arr = ['a', 'b', 'c', 'd', 'e'];
 echo count($arr) . "\n";
 
-echo $arr[count($arr) - 1] . "/n" . $arr[count($arr) - 2] . "/n";
+echo $arr[count($arr) - 1] . "\n" . $arr[count($arr) - 2] . "\n";
 
 //Task 18. Конструкция if else
 echo "\nКонструкция if else\n";
@@ -279,7 +279,7 @@ if ($test == 0) echo "верно";
 
 $age = rand(1,1000);
 if (10 > $age or $age > 99) {
-    echo "Число меньше 10 или больше 99\n";
+    echo "\nЧисло меньше 10 или больше 99\n";
 } else {
     $sum = 0;
     foreach (str_split("$age") as $digit) {
