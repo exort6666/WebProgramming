@@ -26,7 +26,19 @@ echo "$var12 \n";
 $lastMonth = 1187.23;
 $this_month = 1089.98;
 echo $lastMonth-$this_month;
-echo "\n";
+
+echo "\n\n";
+
+//Task 11(?). Умножение и деление
+
+$numLanguages = 4;
+$months = 11;
+$days = $months * 16;
+$daysPerLanguage = $days / $numLanguages;
+echo "$daysPerLanguage\n";
+
+
+
 
 
 
