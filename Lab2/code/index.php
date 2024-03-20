@@ -1,4 +1,5 @@
 <?php
+
 // Task 1. Доступ по ссылке.
 echo "Task 1.";
 $very_bad_unclear_name = "15 chicken wings";
@@ -110,6 +111,7 @@ for ($i = 0; $i <10; $i++) {
 }
 echo "Наш массив \n";
 var_dump($array);
+
 //Работа с модулем
 echo "\nРабота с модулем\n";
 $a = 10;
@@ -203,8 +205,62 @@ function digitsAddition($inputNumber)
         return $sum;
     }
 }
-
 echo digitsAddition($number) . "\n";
+
+//Task 17. Массивы
+echo "\nМассивы\n";
+
+$tempArray = ["x"];
+for ($i = 1; $i < 10; $i++) {
+    $tempArray[] = $tempArray[$i - 1] . "x";
+}
+
+function arrayFil($line, $count)
+{
+    $array = [$line];
+    for ($i = 1; $i < $count; $i++) {
+        $array[] = $array[$i - 1] . $line;
+    }
+    return $array;
+}
+var_dump(arrayFil('x',5));
+echo "\n";
+
+$array = [[1, 2, 3], [4, 5], [6]];
+$sum = 0;
+foreach ($array as $smallArray) {
+    foreach ($smallArray as $i) {
+        $sum += $i;
+    }
+}
+echo $sum;
+echo "\n";
+
+$tempArray[] = [];
+for ($i = 0; $i < 3; $i++) {
+    $a = 1 + $i * 3;
+    $b = 3 + $i * 3;
+    foreach (range($a, $b) as $j) {
+        $tempArray[$i][] = $j;
+    }
+}
+var_dump($tempArray);
+
+$tempArray = [2, 5, 3, 9];
+$result = $tempArray[0] * $tempArray[1] + $tempArray[2] * $tempArray[3];
+echo $result . "\n";
+
+$user = ['name' => "Evgeniy", 'surname' => "Lagunov", 'patronymic' => "Olegovich"];
+echo $user["surname"] . " " . $user['name'] . " " . $user['patronymic'] . "\n";
+
+$date = ['year' => 2024, 'day' => 20, 'month' => 12];
+echo $date["year"] . " " . $date['month'] . " " . $date['day'] . "\n";
+
+$arr = ['a', 'b', 'c', 'd', 'e'];
+echo count($tempArray) . "\n";
+
+echo $tempArray[count($tempArray) - 1] . "/n" . $tempArray[count($tempArray) - 2] . "/n";
+
 
 
 
