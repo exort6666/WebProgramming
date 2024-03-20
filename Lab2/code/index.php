@@ -29,13 +29,22 @@ echo $lastMonth-$this_month;
 
 echo "\n\n";
 
-//Task 11(?). Умножение и деление
+//Task 11. Умножение и деление
 
 $numLanguages = 4;
 $months = 11;
 $days = $months * 16;
 $daysPerLanguage = $days / $numLanguages;
-echo "$daysPerLanguage\n";
+echo $daysPerLanguage;
+
+echo "\n\n";
+
+//Task 12. Степень
+echo 8**2;
+
+echo "\n\n";
+
+
 
 
 
