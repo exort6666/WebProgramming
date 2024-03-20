@@ -149,6 +149,62 @@ while ($sum <=10){
 }
 echo "\nНужно сложить $i элементов\n";
 
+//Task 15. Функции
+echo "\nФункции\n";
+function printStringReturnNumber($line) //Можно написать function printStringReturnNumber(string $line): int
+{                                       // но у меня другая версия php
+    echo $line;
+    return intval($line);
+}
+$myNum = printStringReturnNumber("12");
+echo $myNum;
+
+//Task 16.
+echo "\nФункции\n";
+function increaseEnthusiasm($line){
+    return $line . "!";
+}
+echo increaseEnthusiasm("Stroka") . "\n";
+
+function repeatThreeTimes($line){
+    return $line . $line . $line;
+}
+
+echo repeatThreeTimes("Stroka") . "\n";
+
+echo increaseEnthusiasm(repeatThreeTimes("Stroka")) . "\n";
+
+function cut($line, $count = 10){
+    return substr($line, 0, $count);
+}
+echo cut("veryVeryBigMessage") . "\n";
+
+function printArrayRecursion($array, $index = 0)
+{
+    echo $array[$index++] . " ";
+    if ($index < count($array)) {
+        printArrayRecursion($array, $index);
+    }
+}
+
+printArrayRecursion([1, 2, 3, 4, 5, 7]);
+echo "\n";
+
+$number = 12345;
+function digitsAddition($inputNumber)
+{
+    $sum = 0;
+    foreach (str_split("$inputNumber") as $digit) {
+        $sum += intval($digit);
+    }
+    if ($sum > 9) {
+        return digitsAddition($sum);
+    } else {
+        return $sum;
+    }
+}
+
+echo digitsAddition($number) . "\n";
 
 
 
