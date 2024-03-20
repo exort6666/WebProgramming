@@ -302,6 +302,25 @@ for ($i = 1; $i<=20;$i++){
     echo $line . "\n";
 }
 
+//Task 20.
+$array = [7, 40, 19, 52, 42, 1];
+$average = array_sum($array) / count($array);
+echo $average . "\n";
+
+$sum = array_sum(range(1, 100));
+echo $sum . "\n";
+
+$array = [1, 4, 9, 16, 25];
+$array = array_map('sqrt', $array);
+//echo $tempArray[1];
+
+$arrayKeys = range('a', 'z');
+$arrayValues = range(1, 26);
+$tempArray = array_combine($arrayKeys, $arrayValues);
+
+$line = '1234567890';
+$sum = array_sum(str_split($line, 2));
+echo $sum;
 
 
 
