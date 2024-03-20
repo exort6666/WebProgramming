@@ -210,11 +210,11 @@ echo digitsAddition($number) . "\n";
 //Task 17. Массивы
 echo "\nМассивы\n";
 
-$tempArray = ["x"];
+$array = ["x"];
 for ($i = 1; $i < 10; $i++) {
-    $tempArray[] = $tempArray[$i - 1] . "x";
+    $array[] = $array[$i - 1] . "x";
 }
-
+var_dump($array);
 function arrayFil($line, $count)
 {
     $array = [$line];
@@ -236,24 +236,25 @@ foreach ($array as $smallArray) {
 echo $sum;
 echo "\n";
 
-$tempArray[] = [];
+$array = [];
 for ($i = 0; $i < 3; $i++) {
     $a = 1 + $i * 3;
     $b = 3 + $i * 3;
+    $array[] = [];
     foreach (range($a, $b) as $j) {
-        $tempArray[$i][] = $j;
+        $array[$i][] = $j;
     }
 }
-var_dump($tempArray);
+var_dump($array);
 
-$tempArray = [2, 5, 3, 9];
-$result = $tempArray[0] * $tempArray[1] + $tempArray[2] * $tempArray[3];
+$array = [2, 5, 3, 9];
+$result = $array[0] * $array[1] + $array[2] * $array[3];
 echo $result . "\n";
 
 $user = ['name' => "Evgeniy", 'surname' => "Lagunov", 'patronymic' => "Olegovich"];
 echo $user["surname"] . " " . $user['name'] . " " . $user['patronymic'] . "\n";
 
-$date = ['year' => 2024, 'day' => 20, 'month' => 12];
+$date = ['year' => 2024, 'day' => 20, 'month' => 3];
 echo $date["year"] . " " . $date['month'] . " " . $date['day'] . "\n";
 
 $arr = ['a', 'b', 'c', 'd', 'e'];
@@ -268,7 +269,7 @@ function boolSumTen($firstNum, $secondNum)
     return 10<=$firstNum+$secondNum;
 }
 
-function secondTrueOrFalse($firstNum, $secondNum)
+function equality($firstNum, $secondNum)
 {
     return $firstNum === $secondNum;
 }
@@ -293,6 +294,13 @@ if (10 > $age or $age > 99) {
 
 $array = [12, 23, 12, 12];
 if (count($array) == 3) echo $array[0]+$array[1]+$array[2] . "\n";
+
+//Task 19.
+$line = null;
+for ($i = 1; $i<=20;$i++){
+    $line .= 'x';
+    echo $line . "\n";
+}
 
 
 
