@@ -44,6 +44,17 @@ echo 8**2;
 
 echo "\n\n";
 
+//Task 13. Операторы присваивания
+$myNum = 13;
+$answer = $myNum;
+$answer += 2;
+$answer *= 2;
+$answer -= 2;
+$answer /= 2;
+$answer -= $myNum;
+echo $answer;
+
+echo "\n\n";
 
 
 
