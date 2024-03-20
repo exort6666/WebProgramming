@@ -257,9 +257,43 @@ $date = ['year' => 2024, 'day' => 20, 'month' => 12];
 echo $date["year"] . " " . $date['month'] . " " . $date['day'] . "\n";
 
 $arr = ['a', 'b', 'c', 'd', 'e'];
-echo count($tempArray) . "\n";
+echo count($arr) . "\n";
 
-echo $tempArray[count($tempArray) - 1] . "/n" . $tempArray[count($tempArray) - 2] . "/n";
+echo $arr[count($arr) - 1] . "/n" . $arr[count($arr) - 2] . "/n";
+
+//Task 18. Конструкция if else
+echo "\nКонструкция if else\n";
+function boolSumTen($firstNum, $secondNum)
+{
+    return 10<=$firstNum+$secondNum;
+}
+
+function secondTrueOrFalse($firstNum, $secondNum)
+{
+    return $firstNum === $secondNum;
+}
+
+$test = 0;
+if ($test == 0) echo "верно";
+
+$age = rand(1,1000);
+if (10 > $age or $age > 99) {
+    echo "Число меньше 10 или больше 99\n";
+} else {
+    $sum = 0;
+    foreach (str_split("$age") as $digit) {
+        $sum += intval($digit);
+    }
+    if ($sum <= 9) {
+        echo "Сумма цифр однозначна\n";
+    } else {
+        echo "Сумма цифр двузначна\n";
+    }
+}
+
+$array = [12, 23, 12, 12];
+if (count($array) == 3) echo $array[0]+$array[1]+$array[2] . "\n";
+
 
 
 
