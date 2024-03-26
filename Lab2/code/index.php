@@ -66,7 +66,7 @@ $remainder = $a%$b;
 
 echo $remainder;
 
-if (0 == $remainder){
+if (0 === $remainder){
     echo "\nДелится. Результат деления - ";
     echo (int) $a/$b;
 } else{
@@ -131,7 +131,7 @@ echo "\nОбщее\n";
 $number = 30;
 $array = [];
 for ($i = 1;$i**2 <= $number;$i++){
-    if (0 == $number%$i){
+    if (0 === $number%$i){
         $array[] = $i;
         if ($i*$i!=$number){
             $array[] = $number / $i;
@@ -145,7 +145,7 @@ var_dump($array);
 $array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 $sum = 0;
 $i = 0;
-while ($sum <=10){
+while ($sum <= 10){
     $sum+=$array[$i];
     $i++;
 }
@@ -275,7 +275,7 @@ function equality($firstNum, $secondNum)
 }
 
 $test = 0;
-if ($test == 0) echo "верно";
+if (0 === $test) echo "верно";
 
 $age = rand(1,1000);
 if (10 > $age or $age > 99) {
@@ -293,7 +293,7 @@ if (10 > $age or $age > 99) {
 }
 
 $array = [12, 23, 12, 12];
-if (count($array) == 3) echo $array[0]+$array[1]+$array[2] . "\n";
+if (3 === count($array)) echo $array[0]+$array[1]+$array[2] . "\n";
 
 //Task 19.
 $line = null;
